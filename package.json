@@ -1,0 +1,17 @@
+{
+  "name": "bubble_trouble",
+  "version": "1.0.0",
+  "description": "Agario clone using EaselJS",
+  "main": "bundle.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repositor": "http://github.com/adoundakov/bubbletrouble",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "createjs-easeljs": "^0.8.2",
+    "webpack": "^1.13.2"
+  }
+}
