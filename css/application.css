@@ -1,0 +1,22 @@
+body {
+  font-family: 'Helvetica Neue', sans-serif;
+  width: 100%;
+  display: block;
+  box-sizing: border-box;
+}
+
+canvas {
+  border: 1px solid red;
+  margin: 0 auto;
+  display: block;
+}
+
+.header {
+  margin: 0 auto;
+  display: block;
+}
+
+.header h2 {
+  margin: 14px auto;
+  text-align: center;
+}
