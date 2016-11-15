@@ -1,6 +1,7 @@
 module.exports = {
   entry: "./lib/bubble_trouble.js",
   output: {
+    path: "./lib",
     filename: "bundle.js"
   },
   module: {
