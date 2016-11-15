@@ -3,12 +3,15 @@ body {
   width: 100%;
   display: block;
   box-sizing: border-box;
+  background: #ccc;
 }
 
 canvas {
-  border: 1px solid red;
+  border-radius: 3px;
+  border: 1px solid #222;
   margin: 0 auto;
   display: block;
+  background: #fff;
 }
 
 .header {
@@ -19,4 +22,29 @@ canvas {
 .header h2 {
   margin: 14px auto;
   text-align: center;
+}
+
+footer {
+  width: 700px;
+  margin: 0 auto;
+}
+
+footer:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+footer img {
+  float: right;
+  margin: 7px 0 7px 7px;
+  width: 25px;
+  height: 25px;
+  background-color: #fff;
+  filter: grayscale(1);
+  transition: filter 200ms linear;
+}
+
+footer img:hover {
+  filter: grayscale(0);
 }
