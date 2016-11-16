@@ -3,39 +3,42 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,700" rel="stylesheet">
     <link rel="stylesheet" href="css/application.css">
     <script src="lib/vendor/keymaster.js" charset="utf-8"></script>
     <script src="lib/vendor/jquery-3.1.1.min.js" charset="utf-8"></script>
     <script src="lib/bundle.js" charset="utf-8"></script>
+    <link rel="shortcut icon" href="lib/images/bubbles.png">
     <title>BubbleTrouble</title>
   </head>
   <body>
-    <div class='header'>
-      <h2>BubbleTrouble</h2>
-      <div class="sub-header">
-        <p>
-          Controls: w/s/a/d or arrow keys for up/down/left/right
-        </p>
-        <p>
-          Space to pause
-        </p>
-      </div>
+    <canvas id="canvas"></canvas>
+
+    <div id="paused" class="game-overlay">
+        <h2>PAUSED</h2>
+        <br/>
+        Hit 'p' to resume
     </div>
-    <section class="content">
-      <div id="paused">
-          <strong>The game is paused.</strong>
-          <br/>
-          Hit 'space' or the pause button to resume.
-      </div>
-      <div id="newGame" class='show'>
-        <strong>Welcome.</strong>
-        <br>
-        <a>New Game</a>
-      </div>
-      <div class="game">
-        <canvas id="canvas" width="700" height="600"></canvas>
-      </div>
-    </section>
+
+    <div id="newGame" class='show game-overlay'>
+      <h2>BubbleTrouble</h2>
+      <p>
+        Become the biggest
+        <br><br>
+        Press Space to Start
+      </p>
+    </div>
+
+    <div id='newGameInfo' class="show game-overlay lower">
+      <h3>Controls</h3>
+      <ul>
+        <li><span>w-a-s-d</span><span>Move</span></li>
+        <li><span>p</span><span>Pause</span></li>
+        <li><span>m</span><span>Mute</span></li>
+      </ul>
+    </div>
+
+
     <footer>
       <a href="http://linkedin.com/in/adoundakov">
         <img src="lib/images/linkedin.png" alt="LinkedIn link" />
