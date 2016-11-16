@@ -36,6 +36,32 @@ li span {
   text-align: center;
 }
 
+#difficulty {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+#difficulty li {
+  width: 30%;
+  transition: color 200ms linear;
+  transition: background 200ms linear;
+  border-radius: 3px;
+  height: 1.2em;
+  align-items: flex-end;
+  text-align: center;
+}
+
+#difficulty li:hover {
+  cursor: pointer;
+}
+
+.selected {
+  color: #fff;
+  background: #012345;
+}
+
 h2 {
   font-size: 36px;
   font-weight: 600;
