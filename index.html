@@ -4,21 +4,27 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="css/application.css">
-    <script src="vendor/keymaster.js" charset="utf-8"></script>
+    <script src="lib/vendor/keymaster.js" charset="utf-8"></script>
+    <script src="lib/vendor/jquery-3.1.1.min.js" charset="utf-8"></script>
     <script src="lib/bundle.js" charset="utf-8"></script>
     <title>BubbleTrouble</title>
   </head>
   <body>
     <div class='header'>
       <h2>BubbleTrouble</h2>
-      <p>
-        Controls: "w/s/a/d or arrow keys for up/down/left/right"
-      </p>
+      <div class="sub-header">
+        <p>
+          Controls: "w/s/a/d or arrow keys for up/down/left/right"
+        </p>
+      </div>
     </div>
-    <div class="game">
-      <canvas id="canvas" width="700" height="600"></canvas>
-    </div>
+    <section class="content">
+      <div class="game">
+        <canvas id="canvas" width="700" height="600"></canvas>
+      </div>
+    </section>
     <footer>
+      <img id='pause' src="lib/images/playpause.png" alt="pause game" />
       <a href="http://linkedin.com/in/adoundakov">
         <img src="lib/images/linkedin.png" alt="LinkedIn link" />
       </a>
