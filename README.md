@@ -2,25 +2,24 @@
 
 ## Background
 
-[Agario](www.agar.io) is a recent game that utilizes the concept of 'eat or be eaten', with players roaming around a game board in pursuit of food. A player can absorb food or another player if that bubble is smaller in size.
+BubbleTrouble is a reimagining of the popular eat-or-be-eaten game [agario](www.agar.io), with players roaming around a game board in pursuit of food. A player can absorb food or another player if that bubble is smaller in size. Alternatively, the player can be eaten by bubbles that are bigger in size.
 
-There are many variations of Agario out there, with different twists. This simulation eschews the multiplayer aspect of the game in favor of a more visually appealing single player game (like [Osmos](http://www.osmos-game.com/)).
+There are many variations of Agario out there, with different twists. This simulation eschews the multiplayer aspect of the game in favor of a more robust  single player experience (like [Osmos](http://www.osmos-game.com/)).
 
 ## Functionality and MVP
 
 In BubbleTrouble, players will be able to:
 
-- [ ] Start, pause, and reset a randomly generated game board.
+- [ ] Start and pause/play a randomly generated game board.
 - [ ] Manipulate initial game state variables (bubble size, number of bubbles, etc.)
-- [ ] Choose from 3 preset difficulites (easy, medium, hard)
-- [ ] Adjust the game speed.
+- [ ] Choose from 3 preset difficulties (easy, medium, hard)
 - [ ] Learn about the implementation of the game though:
   * A production README on the GitHub repo
   * An about section on the actual game page
 
 ## Wireframes
 
-BubbleTrouble is designed to be a single page app, without any database. The single screen will have the game viewport, difficulty controls, nav links to relevant pages (GitHub, my LinkedIn), and an About page.
+BubbleTrouble is designed to be a single page app, without any database. The single screen will have the game viewport, difficulty controls, nav links to relevant pages (GitHub, my LinkedIn), and an About modal.
 
 The difficulty controls consist of 4 buttons: easy, medium, hard, and custom.
 Clicking on the custom button will reveal an additional set of controls:
@@ -32,17 +31,17 @@ Clicking on the custom button will reveal an additional set of controls:
 
 ## Implementation
 
-BubbleTrouble will be written in basic JavaScript, with the graphical manipulation done through `Easel.js`. Webpack will also be used to bundle up and serve various scripts needed by project.
+BubbleTrouble will be written in basic JavaScript, with the graphical manipulation done through an HTML5 Canvas element. Webpack will also be used to bundle up and serve various scripts needed by the project.
 
 There will be a few helper scripts in this project:
   `board.js`: lightweight script that deals with redrawing board
   `util.js`: contains helper functions to assist in collision calculation etc.
-  `cell.js`: handles player bubble movement and growth from absorbing other bubbles
-  `bubble.js`: same as `cell.js` but without movement controls
+  `ship.js`: handles player bubble movement and growth from absorbing other bubbles
+  `bubble.js`: same as `ship.js` but without movement controls
 
 ## Development Timeline
 
-**Day 1:** Basic project init, learn basics of `Easel.js`, be able to render random array of bubbles to `Canvas` element. Maybe write project skeleton.
+**Day 1:** Basic project init, be able to render random array of bubbles to `Canvas` element. Write project skeleton.
 
 **Day 2:** Build out bubble motion and collision detection. Write the `bubble.js` and `util.js` files. Goal by end of day is to have random motion of bubbles with working collisions.
 
