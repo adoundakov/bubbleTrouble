@@ -1,22 +1,3 @@
-@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
-@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
-@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
-
-.fade-in {
-  opacity:0;
-  -webkit-animation:fadeIn ease-in 1;
-  -moz-animation:fadeIn ease-in 1;
-  animation:fadeIn ease-in 1;
-
-  -webkit-animation-fill-mode:forwards;
-  -moz-animation-fill-mode:forwards;
-  animation-fill-mode:forwards;
-
-  -webkit-animation-duration:350ms;
-  -moz-animation-duration:350ms;
-  animation-duration:350ms;
-}
-
 * {
   font-family: 'Josefin Sans', sans-serif;
   color: #012345;
@@ -25,7 +6,6 @@
 body {
   height: 100%;
   margin: 0;
-  background-color: #123456;
 }
 
 ul {
