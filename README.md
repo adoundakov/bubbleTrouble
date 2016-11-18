@@ -1,5 +1,7 @@
 # BubbleTrouble
 
+[BubbleTrouble live](http://adoundakov.github.io/bubbleTrouble)
+
 ## Background
 
 BubbleTrouble is a reimagining of the popular eat-or-be-eaten game [agario](www.agar.io), with players roaming around a game board in pursuit of food. A player can absorb food or another player if that bubble is smaller in size. Alternatively, the player can be eaten by bubbles that are bigger in size.
@@ -10,44 +12,38 @@ There are many variations of Agario out there, with different twists. This simul
 
 In BubbleTrouble, players will be able to:
 
-- [ ] Start and pause/play a randomly generated game board.
-- [ ] Choose from 3 preset difficulties (easy, medium, hard)
-- [ ] Play any of the 3 presets in 'endless mode'  
-- [ ] Learn about the implementation of the game though:
-  * A production README on the GitHub repo
-  * An about section on the actual game page
+- [x] Start and pause/play a randomly generated game board.
+- [x] Choose from 3 preset difficulties (easy, medium, hard)
+- [x] Play any of the 3 presets in 'endless mode'  
+- [x] Learn about the implementation of the game through Production ReadMe
 
-## Wireframes
+## Graphics
 
-BubbleTrouble is designed to be a single page app, without any database. The single screen will have the game viewport, difficulty controls, nav links to relevant pages (GitHub, my LinkedIn), and an About modal.
+BubbleTrouble is a single page app, without any database. The single screen contains the game viewport, difficulty controls, and nav links to relevant pages (GitHub, my LinkedIn).
 
-The difficulty controls consist of 4 buttons: easy, medium, hard, and custom.
-Clicking on the custom button will reveal an additional set of controls:
-  - Slider to adjust game speed
-  - Text box inputs for initial density
-  - Slider / Dial for variance in initial side
+The difficulty controls consist of 4 buttons: easy, medium, hard, and an additional toggle for endless mode.
 
-![link to app wireframe](docs/wireframes/app_overview.png)
+In endless mode, once the player eats all the bubbles on the screen they are returned to the center and new bubbles are spawned.
+
+![link to app screenshot](docs/screenshots/mainScreen.png)
 
 ## Implementation
 
-BubbleTrouble will be written in basic JavaScript, with the graphical manipulation done through an HTML5 Canvas element. Webpack will also be used to bundle up and serve various scripts needed by the project.
+BubbleTrouble is written in basic JavaScript, with the graphical manipulation done through an HTML5 Canvas element. Webpack is used to bundle up and serve various scripts needed by the project.
 
-There will be a few helper scripts in this project:
-  `board.js`: lightweight script that deals with redrawing board
-  `util.js`: contains helper functions to assist in collision calculation etc.
-  `ship.js`: handles player bubble movement and growth from absorbing other bubbles
-  `bubble.js`: same as `ship.js` but without movement controls
+#### Bubbles
 
-## Development Timeline
+Bubbles are created when the `game` is started. They are randomly distributed, with a 100 square pixel safety zone in the center, ensuring the player does not spawn into an enemy bubble.
 
-**Day 1:** Basic project init, be able to render random array of bubbles to `Canvas` element. Write project skeleton.
+A bubble is also initialized with a random blue color, radius, and velocity. The amount of starting bubbles is dependent on the difficulty selected in the main menu.
 
-**Day 2:** Build out bubble motion and collision detection. Write the `bubble.js` and `util.js` files. Goal by end of day is to have random motion of bubbles with working collisions.
+The bubble absorption logic is handled by the `collideWith(other)` method, which compares the two radii and absorbs the smaller into the larger.
 
-**Day 3:** Add Player movement and begin visual styling of game, end game detection.
+![absorption picture](docs/screenshots/collision.png)
 
-**Day 4:** Create visual sections of game. Build out styling and buttons, about page, and modal. Finish lingering ToDo items from Days 1-3. Begin bonus features if time.
+#### Ship
+
+The player ship has the same methods as a bubble, but also includes a `power()` method, that accelerates the ship while the user holds down a movement key. This is done to avoid the initial 500ms key-repeat delay on most keyboards (500ms for the first repeat, then 80ms per repeat additional keypresses).
 
 ## Bonus Features
 
@@ -58,4 +54,4 @@ There are a few bonus features that would add extra visual or gameplay elements,
       * To move you eject bubbles opposite of the direction you want to move, physics moves you around.
   - [ ] Add extra bubble Class (enemies) that have basic AI
       * Chase you if they are bigger, seek food if you are bigger.
-  - [ ] Add special bubbles (attract / repulse) to change default behavior of bubbles.
+  - [ ] Add special bubbles (attract / repulse)
