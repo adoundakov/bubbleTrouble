@@ -123,24 +123,32 @@ footer img:hover {
   position: fixed;
   width: 200px;
   height: auto;
-  z-index: 5;
+  z-index: 0;
   top: 15%;
   left: 40%;
   transition: opacity 300ms linear;
 }
 
 .show {
+  z-index: 5;
   opacity: 1 !important;
-}
-
-.hide {
-  opacity: 0 !important;
 }
 
 .lower {
   top: 40%;
 }
 
-.fade {
-  animation: fade ease-in 500ms;
+.endless {
+  width: 100%;
+  padding: 7px 14px;
+  display: flex;
+  justify-content: center;
+}
+
+.endless input {
+  margin-left: 20px;
+}
+
+.endless input:hover {
+  cursor: pointer;
 }

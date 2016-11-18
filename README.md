@@ -11,8 +11,8 @@ There are many variations of Agario out there, with different twists. This simul
 In BubbleTrouble, players will be able to:
 
 - [ ] Start and pause/play a randomly generated game board.
-- [ ] Manipulate initial game state variables (bubble size, number of bubbles, etc.)
 - [ ] Choose from 3 preset difficulties (easy, medium, hard)
+- [ ] Play any of the 3 presets in 'endless mode'  
 - [ ] Learn about the implementation of the game though:
   * A production README on the GitHub repo
   * An about section on the actual game page
