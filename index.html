@@ -12,54 +12,54 @@
   </head>
   <body>
     <canvas id="canvas"></canvas>
-
-    <div id="paused" class="game-overlay">
-        <h2>PAUSED</h2>
-        <br/>
-        Hit 'p' to resume
-    </div>
-
-    <div id="newGame" class='show game-overlay'>
-      <h2>BubbleTrouble</h2>
-      <p>
-        Become the biggest
-        <br><br>
-        Press Space to Start
-      </p>
-    </div>
-
-    <div id='newGameInfo' class="show game-overlay lower">
-      <h3>Settings</h3>
-      <ul id='difficulty'>
-        <li id="easy" class="selected">Easy</li>
-        <li id='med'>Medium</li>
-        <li id='hard'>Hard</li>
-      </ul>
-      <div class="endless" id="endless">
-        Endless?<input type="checkbox" name="endless" id="checkbox">
+    <div class="overlay-container">
+      <div id="paused" class="game-overlay">
+          <h2>PAUSED</h2>
+          <br/>
+          Hit 'p' to resume
       </div>
-      <h3>Controls</h3>
-      <ul>
-        <li><span>w-a-s-d</span><span>Move</span></li>
-        <li><span>p</span><span>Pause</span></li>
-        <li><span>m</span><span>Mute</span></li>
-      </ul>
-    </div>
 
-    <div id='winGame' class="game-overlay">
-      <h2>You Won!</h2>
-      <p>
-        Press Space to Replay
-      </p>
-    </div>
+      <div id="newGame" class='show game-overlay'>
+        <h2>BubbleTrouble</h2>
+        <p>
+          Become the biggest
+          <br><br>
+          Press Space to Start
+        </p>
+      </div>
 
-    <div class="game-overlay" id="loseGame">
-      <h2>You Lost!</h2>
-      <p>
-        Press Space to Try Again
-      </p>
-    </div>
+      <div id='newGameInfo' class="show game-overlay lower">
+        <h3>Settings</h3>
+        <ul id='difficulty'>
+          <li id="easy" class="selected">Easy</li>
+          <li id='med'>Medium</li>
+          <li id='hard'>Hard</li>
+        </ul>
+        <div class="endless" id="endless">
+          Endless?
+        </div>
+        <h3>Controls</h3>
+        <ul>
+          <li><span>w-a-s-d</span><span>Move</span></li>
+          <li><span>p</span><span>Pause</span></li>
+          <li><span>m</span><span>Mute</span></li>
+        </ul>
+      </div>
 
+      <div id='winGame' class="game-overlay">
+        <h2>You Won!</h2>
+        <p>
+          Press Space to Replay
+        </p>
+      </div>
+
+      <div class="game-overlay" id="loseGame">
+        <h2>You Lost!</h2>
+        <p>
+          Press Space to Try Again
+        </p>
+      </div>
+    </div>
     <footer>
       <a href="http://linkedin.com/in/adoundakov">
         <img src="lib/images/linkedin.png" alt="LinkedIn link" />
